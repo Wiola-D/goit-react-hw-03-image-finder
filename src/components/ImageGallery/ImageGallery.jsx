@@ -1,9 +1,3 @@
-import { ImagesGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
-
-export const ImageGallery = ({ images }) => {
-  return (
-    <ul className="ImageGallery">
-      <ImagesGalleryItem images={images} />
-    </ul>
-  );
+export const ImageGallery = ({ children }) => {
+  return <ul className="ImageGallery">{children}</ul>;
 };
