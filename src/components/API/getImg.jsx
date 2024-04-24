@@ -5,7 +5,10 @@ export const fetchImages = async (query, page) => {
     const response = await fetch(Api);
     const data = await response.json();
     const images = data.hits;
-    return images;
+    const totalHits = data.totalHits;
+    console.log(images);
+
+    return { images, totalHits };
   } catch (error) {
     return error;
   }
